@@ -10,6 +10,6 @@ struct WebsiteName
     char password[100];
 };
 
-void passwordGeneration(WebsiteName *array, int characterNumber);
+void generatePassword(char *password, int characterNumber);
 
 #endif // MAIN_H_INCLUDED
