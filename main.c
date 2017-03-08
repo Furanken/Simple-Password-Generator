@@ -53,7 +53,7 @@ int main(int argc, char** argv)
 void passwordGeneration(WebsiteName *array, int characterNumber)
 {
 
-    srand(time(NULL)); //initialize required for randomization
+    srand(time(NULL)); //initialization required for randomization
     int i = 0;
     char arrayABC[62] = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
