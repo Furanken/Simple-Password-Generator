@@ -8,8 +8,9 @@
 */
 int main(int argc, char** argv)
 {
+   srand(time(NULL)); //initialization required for randomization
 
-    int boucle = 0; // with this you can generate all password you want without restarting the program
+    
     do
     {
 
@@ -26,7 +27,7 @@ int main(int argc, char** argv)
 
 
 
-        passwordGeneration(&website, characterNumber); //call the passwordGeneration function
+        generatePassword(&website.password, characterNumber); //call the passwordGeneration function
 
 
 
@@ -43,22 +44,22 @@ int main(int argc, char** argv)
 
 
     }
-    while(boucle == 0);
+    while(1);
 
 
 
     return 0;
 }
 
-void passwordGeneration(WebsiteName *array, int characterNumber)
+void generatePassword(char *password, int characterNumber)
 {
 
-    srand(time(NULL)); //initialization required for randomization
+    
     int i = 0;
     char arrayABC[62] = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     for(i; i < characterNumber; i++)
     {
-        array->password[i] = arrayABC[(rand() % 62)]; //replace the content of WebsiteName.password by the generated character
+        password[i] = arrayABC[(rand() % 62)]; //replace the content of WebsiteName.password by the generated character
     }
 }
