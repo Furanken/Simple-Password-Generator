@@ -55,10 +55,10 @@ void passwordGeneration(WebsiteName *array, int characterNumber)
 
     srand(time(NULL)); //initialize required for randomization
     int i = 0;
-    char arrayABC[36] = "abcdefghijklmnopqrstuvwxyz0123456789";
+    char arrayABC[62] = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     for(i; i < characterNumber; i++)
     {
-        array->password[i] = arrayABC[(rand() % 36)]; //replace the content of WebsiteName.password by the generated character
+        array->password[i] = arrayABC[(rand() % 62)]; //replace the content of WebsiteName.password by the generated character
     }
 }
