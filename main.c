@@ -14,7 +14,7 @@ int main(int argc, char** argv)
     {
 
         int characterNumber = 0;
-        //int i = 0;
+        
 
 
         WebsiteName website = {"", ""}; //initialize the Websitname structure with both variable empty
